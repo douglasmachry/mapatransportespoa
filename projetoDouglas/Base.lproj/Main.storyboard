@@ -1,24 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="B0C-ea-54E">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="Knn-qq-swt">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="B0C-ea-54E" customClass="ViewController" customModule="projetoDouglas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uWv-kQ-ZwT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7l5-9H-ffX">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="Itinerários" id="iP5-GY-2TH"/>
+                                    <tabBarItem title="Paradas" id="49b-U4-6ZJ"/>
+                                    <tabBarItem title="Favoritos" id="F7h-aC-D80"/>
+                                </items>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tabBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fte-AE-atL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="1" green="0.65405420049868757" blue="0.55653875731077695" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="POA Transportes" id="g6V-VX-WLY"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeF-Ab-GW3" customClass="DesignableButton" customModule="projetoDouglas" customModuleProvider="target">
+                                <rect key="frame" x="74" y="411" width="227" height="75"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="pRC-AZ-6q6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Ver itinerário">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="verItnerarioButton:" destination="B0C-ea-54E" eventType="touchUpInside" id="PFP-9L-o2w"/>
+                                    <segue destination="yOe-ei-dQt" kind="show" identifier="itinerarioSegue" id="z4H-gx-SuI"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ts9-m6-9Xv">
+                                <rect key="frame" x="0.0" y="171" width="375" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="csB-GP-UE4"/>
+                                </constraints>
+                            </pickerView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Pesquisar" translatesAutoresizingMaskIntoConstraints="NO" id="35M-py-Vd6">
+                                <rect key="frame" x="0.0" y="124" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione a linha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E55-Hk-HgZ">
+                                <rect key="frame" x="16" y="103" width="280" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4ys-WL-fXV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85666037749816226" green="1" blue="0.74450005754992898" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E55-Hk-HgZ" firstAttribute="leading" secondItem="uWv-kQ-ZwT" secondAttribute="leadingMargin" id="2JH-pM-XA0"/>
+                            <constraint firstItem="GeF-Ab-GW3" firstAttribute="top" secondItem="Ts9-m6-9Xv" secondAttribute="bottom" constant="78" id="5wY-t3-zug"/>
+                            <constraint firstItem="Ts9-m6-9Xv" firstAttribute="trailing" secondItem="7l5-9H-ffX" secondAttribute="trailing" id="6ps-D5-5wM"/>
+                            <constraint firstItem="OSr-Mz-CBg" firstAttribute="trailing" secondItem="E55-Hk-HgZ" secondAttribute="trailing" constant="79" id="Cum-i3-07a"/>
+                            <constraint firstItem="Fte-AE-atL" firstAttribute="top" secondItem="OSr-Mz-CBg" secondAttribute="top" id="Fl2-og-kkO"/>
+                            <constraint firstItem="Ts9-m6-9Xv" firstAttribute="top" secondItem="E55-Hk-HgZ" secondAttribute="bottom" constant="47" id="HOq-XX-mED"/>
+                            <constraint firstItem="7l5-9H-ffX" firstAttribute="bottom" secondItem="OSr-Mz-CBg" secondAttribute="bottom" id="IDb-vh-0Gu"/>
+                            <constraint firstItem="35M-py-Vd6" firstAttribute="top" secondItem="E55-Hk-HgZ" secondAttribute="bottom" id="Rsp-O2-eLD"/>
+                            <constraint firstItem="Fte-AE-atL" firstAttribute="leading" secondItem="35M-py-Vd6" secondAttribute="leading" id="Xj4-JU-4Zs"/>
+                            <constraint firstItem="E55-Hk-HgZ" firstAttribute="top" secondItem="Fte-AE-atL" secondAttribute="bottom" constant="39" id="aD1-56-lN1"/>
+                            <constraint firstItem="Fte-AE-atL" firstAttribute="trailing" secondItem="35M-py-Vd6" secondAttribute="trailing" id="cEJ-jP-gJp"/>
+                            <constraint firstItem="GeF-Ab-GW3" firstAttribute="leading" secondItem="OSr-Mz-CBg" secondAttribute="leading" constant="74" id="ciB-L0-pox"/>
+                            <constraint firstItem="Ts9-m6-9Xv" firstAttribute="leading" secondItem="7l5-9H-ffX" secondAttribute="leading" id="dvE-lc-JWp"/>
+                            <constraint firstAttribute="trailing" secondItem="Fte-AE-atL" secondAttribute="trailing" id="gcz-As-nn9"/>
+                            <constraint firstItem="GeF-Ab-GW3" firstAttribute="centerX" secondItem="7l5-9H-ffX" secondAttribute="centerX" id="i69-zQ-wiz"/>
+                            <constraint firstItem="35M-py-Vd6" firstAttribute="trailing" secondItem="Ts9-m6-9Xv" secondAttribute="trailing" id="pr5-Yq-4ie"/>
+                            <constraint firstItem="35M-py-Vd6" firstAttribute="leading" secondItem="Ts9-m6-9Xv" secondAttribute="leading" id="xAn-ff-zXD"/>
+                            <constraint firstItem="Fte-AE-atL" firstAttribute="leading" secondItem="uWv-kQ-ZwT" secondAttribute="leading" id="zbD-yy-rx2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OSr-Mz-CBg"/>
+                    </view>
+                    <connections>
+                        <outlet property="filtroSearchBar" destination="35M-py-Vd6" id="4cc-71-v3p"/>
+                        <outlet property="onibusPickerView" destination="Ts9-m6-9Xv" id="f0O-Dq-1Cc"/>
+                        <outlet property="searchDisplayController" destination="g3d-WG-UgC" id="sfy-hy-LqA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wg3-V8-0Ae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="g3d-WG-UgC">
+                    <connections>
+                        <outlet property="delegate" destination="B0C-ea-54E" id="5Tr-XR-GTi"/>
+                        <outlet property="searchContentsController" destination="B0C-ea-54E" id="nUH-Zf-gsB"/>
+                        <outlet property="searchResultsDataSource" destination="B0C-ea-54E" id="1sM-Bs-39o"/>
+                        <outlet property="searchResultsDelegate" destination="B0C-ea-54E" id="EID-9h-slX"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-1114.4000000000001" y="-54.422788605697157"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="lCL-xu-Qqz">
+            <objects>
+                <viewController id="yOe-ei-dQt" customClass="MapViewController" customModule="projetoDouglas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Syf-dK-jbm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CbP-KE-ohT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.5025463993" green="0.74936033130000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Title" id="ANm-Al-3YI"/>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5Vi-5h-Zw9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Vi-5h-Zw9" firstAttribute="top" secondItem="uMa-Rh-NxW" secondAttribute="top" constant="44" id="N2P-pr-cjB"/>
+                            <constraint firstItem="CbP-KE-ohT" firstAttribute="leading" secondItem="5Vi-5h-Zw9" secondAttribute="leading" id="W7v-T8-Fm7"/>
+                            <constraint firstItem="CbP-KE-ohT" firstAttribute="top" secondItem="uMa-Rh-NxW" secondAttribute="top" id="XeW-OX-V2r"/>
+                            <constraint firstItem="CbP-KE-ohT" firstAttribute="trailing" secondItem="5Vi-5h-Zw9" secondAttribute="trailing" id="XhM-c2-OIC"/>
+                            <constraint firstItem="5Vi-5h-Zw9" firstAttribute="leading" secondItem="uMa-Rh-NxW" secondAttribute="leading" id="XkQ-19-xCL"/>
+                            <constraint firstItem="5Vi-5h-Zw9" firstAttribute="trailing" secondItem="uMa-Rh-NxW" secondAttribute="trailing" id="g9G-4a-BtK"/>
+                            <constraint firstItem="5Vi-5h-Zw9" firstAttribute="bottom" secondItem="uMa-Rh-NxW" secondAttribute="bottom" id="gae-99-fCy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uMa-Rh-NxW"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ep-Qu-HTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="-54.422788605697157"/>
         </scene>
     </scenes>
 </document>

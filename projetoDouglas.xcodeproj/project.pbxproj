@@ -13,6 +13,7 @@
 		C2E37BD52299AF9300750FA8 /* projetoDouglas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2E37BD32299AF9300750FA8 /* projetoDouglas.xcdatamodeld */; };
 		C2E37BD72299AF9800750FA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E37BD62299AF9800750FA8 /* Assets.xcassets */; };
 		C2E37BDA2299AF9800750FA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E37BD82299AF9800750FA8 /* LaunchScreen.storyboard */; };
+		C2E37BE22299BD1000750FA8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E37BE12299BD1000750FA8 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C2E37BD62299AF9800750FA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2E37BD92299AF9800750FA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2E37BDB2299AF9800750FA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2E37BE12299BD1000750FA8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C2E37BD82299AF9800750FA8 /* LaunchScreen.storyboard */,
 				C2E37BDB2299AF9800750FA8 /* Info.plist */,
 				C2E37BD32299AF9300750FA8 /* projetoDouglas.xcdatamodeld */,
+				C2E37BE12299BD1000750FA8 /* MapViewController.swift */,
 			);
 			path = projetoDouglas;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				C2E37BCF2299AF9300750FA8 /* ViewController.swift in Sources */,
 				C2E37BCD2299AF9300750FA8 /* AppDelegate.swift in Sources */,
 				C2E37BD52299AF9300750FA8 /* projetoDouglas.xcdatamodeld in Sources */,
+				C2E37BE22299BD1000750FA8 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
